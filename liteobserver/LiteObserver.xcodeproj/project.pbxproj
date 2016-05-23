@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3039620A1C018AEA005CE9E2 /* LiteObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 303962091C018AEA005CE9E2 /* LiteObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303962111C018AEA005CE9E2 /* LiteObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303962061C018AEA005CE9E2 /* LiteObserver.framework */; };
+		303962161C018AEA005CE9E2 /* LiteObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303962151C018AEA005CE9E2 /* LiteObserverTests.m */; };
+		303962231C018BA5005CE9E2 /* NSObject+LODealloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 303962211C018BA5005CE9E2 /* NSObject+LODealloc.h */; };
+		303962241C018BA5005CE9E2 /* NSObject+LODealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 303962221C018BA5005CE9E2 /* NSObject+LODealloc.m */; };
+		303962341C01B1B5005CE9E2 /* LODisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 303962321C01B1B5005CE9E2 /* LODisposable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303962351C01B1B5005CE9E2 /* LODisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 303962331C01B1B5005CE9E2 /* LODisposable.m */; };
+		303962441C01D0D4005CE9E2 /* NSObject+NotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 303962421C01D0D4005CE9E2 /* NSObject+NotificationObserver.h */; };
+		303962451C01D0D4005CE9E2 /* NSObject+NotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 303962431C01D0D4005CE9E2 /* NSObject+NotificationObserver.m */; };
+		303962481C01D114005CE9E2 /* LONotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 303962461C01D114005CE9E2 /* LONotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303962491C01D114005CE9E2 /* LONotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 303962471C01D114005CE9E2 /* LONotificationObserver.m */; };
+		3039624C1C01D5AD005CE9E2 /* LOKVObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3039624A1C01D5AD005CE9E2 /* LOKVObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3039624D1C01D5AD005CE9E2 /* LOKVObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039624B1C01D5AD005CE9E2 /* LOKVObserver.m */; };
+		303962501C01D8F2005CE9E2 /* NSObject+KVObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3039624E1C01D8F2005CE9E2 /* NSObject+KVObserver.h */; };
+		303962511C01D8F2005CE9E2 /* NSObject+KVObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039624F1C01D8F2005CE9E2 /* NSObject+KVObserver.m */; };
+		303962521C01DCBA005CE9E2 /* LOMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 303962251C018BBF005CE9E2 /* LOMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B3F6921C0FE15100EF180D /* LOUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B3F6901C0FE15100EF180D /* LOUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B3F6931C0FE15100EF180D /* LOUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B3F6911C0FE15100EF180D /* LOUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		303962121C018AEA005CE9E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 303961FD1C018AEA005CE9E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 303962051C018AEA005CE9E2;
+			remoteInfo = LiteObserver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		303962061C018AEA005CE9E2 /* LiteObserver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiteObserver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		303962091C018AEA005CE9E2 /* LiteObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiteObserver.h; sourceTree = "<group>"; };
+		3039620B1C018AEA005CE9E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303962101C018AEA005CE9E2 /* LiteObserverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiteObserverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		303962151C018AEA005CE9E2 /* LiteObserverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiteObserverTests.m; sourceTree = "<group>"; };
+		303962171C018AEA005CE9E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303962211C018BA5005CE9E2 /* NSObject+LODealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LODealloc.h"; sourceTree = "<group>"; };
+		303962221C018BA5005CE9E2 /* NSObject+LODealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LODealloc.m"; sourceTree = "<group>"; };
+		303962251C018BBF005CE9E2 /* LOMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOMacros.h; sourceTree = "<group>"; };
+		303962321C01B1B5005CE9E2 /* LODisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LODisposable.h; sourceTree = "<group>"; };
+		303962331C01B1B5005CE9E2 /* LODisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LODisposable.m; sourceTree = "<group>"; };
+		303962421C01D0D4005CE9E2 /* NSObject+NotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NotificationObserver.h"; sourceTree = "<group>"; };
+		303962431C01D0D4005CE9E2 /* NSObject+NotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NotificationObserver.m"; sourceTree = "<group>"; };
+		303962461C01D114005CE9E2 /* LONotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LONotificationObserver.h; sourceTree = "<group>"; };
+		303962471C01D114005CE9E2 /* LONotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LONotificationObserver.m; sourceTree = "<group>"; };
+		3039624A1C01D5AD005CE9E2 /* LOKVObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOKVObserver.h; sourceTree = "<group>"; };
+		3039624B1C01D5AD005CE9E2 /* LOKVObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOKVObserver.m; sourceTree = "<group>"; };
+		3039624E1C01D8F2005CE9E2 /* NSObject+KVObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVObserver.h"; sourceTree = "<group>"; };
+		3039624F1C01D8F2005CE9E2 /* NSObject+KVObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVObserver.m"; sourceTree = "<group>"; };
+		30B3F6901C0FE15100EF180D /* LOUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOUtil.h; sourceTree = "<group>"; };
+		30B3F6911C0FE15100EF180D /* LOUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOUtil.m; sourceTree = "<group>"; };
+		8850DD831C48D87F00AE3B79 /* readme.cn.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.cn.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		303962021C018AEA005CE9E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3039620D1C018AEA005CE9E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303962111C018AEA005CE9E2 /* LiteObserver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		303961FC1C018AEA005CE9E2 = {
+			isa = PBXGroup;
+			children = (
+				303962081C018AEA005CE9E2 /* LiteObserver */,
+				303962141C018AEA005CE9E2 /* LiteObserverTests */,
+				303962071C018AEA005CE9E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		303962071C018AEA005CE9E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				303962061C018AEA005CE9E2 /* LiteObserver.framework */,
+				303962101C018AEA005CE9E2 /* LiteObserverTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		303962081C018AEA005CE9E2 /* LiteObserver */ = {
+			isa = PBXGroup;
+			children = (
+				8850DD831C48D87F00AE3B79 /* readme.cn.md */,
+				303962091C018AEA005CE9E2 /* LiteObserver.h */,
+				303962251C018BBF005CE9E2 /* LOMacros.h */,
+				303962321C01B1B5005CE9E2 /* LODisposable.h */,
+				303962331C01B1B5005CE9E2 /* LODisposable.m */,
+				303962211C018BA5005CE9E2 /* NSObject+LODealloc.h */,
+				303962221C018BA5005CE9E2 /* NSObject+LODealloc.m */,
+				303962461C01D114005CE9E2 /* LONotificationObserver.h */,
+				303962471C01D114005CE9E2 /* LONotificationObserver.m */,
+				303962421C01D0D4005CE9E2 /* NSObject+NotificationObserver.h */,
+				303962431C01D0D4005CE9E2 /* NSObject+NotificationObserver.m */,
+				3039624A1C01D5AD005CE9E2 /* LOKVObserver.h */,
+				3039624B1C01D5AD005CE9E2 /* LOKVObserver.m */,
+				3039624E1C01D8F2005CE9E2 /* NSObject+KVObserver.h */,
+				3039624F1C01D8F2005CE9E2 /* NSObject+KVObserver.m */,
+				30B3F6901C0FE15100EF180D /* LOUtil.h */,
+				30B3F6911C0FE15100EF180D /* LOUtil.m */,
+				3039620B1C018AEA005CE9E2 /* Info.plist */,
+			);
+			path = LiteObserver;
+			sourceTree = "<group>";
+		};
+		303962141C018AEA005CE9E2 /* LiteObserverTests */ = {
+			isa = PBXGroup;
+			children = (
+				303962151C018AEA005CE9E2 /* LiteObserverTests.m */,
+				303962171C018AEA005CE9E2 /* Info.plist */,
+			);
+			path = LiteObserverTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		303962031C018AEA005CE9E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3039620A1C018AEA005CE9E2 /* LiteObserver.h in Headers */,
+				303962521C01DCBA005CE9E2 /* LOMacros.h in Headers */,
+				303962341C01B1B5005CE9E2 /* LODisposable.h in Headers */,
+				303962481C01D114005CE9E2 /* LONotificationObserver.h in Headers */,
+				3039624C1C01D5AD005CE9E2 /* LOKVObserver.h in Headers */,
+				30B3F6921C0FE15100EF180D /* LOUtil.h in Headers */,
+				303962231C018BA5005CE9E2 /* NSObject+LODealloc.h in Headers */,
+				303962441C01D0D4005CE9E2 /* NSObject+NotificationObserver.h in Headers */,
+				303962501C01D8F2005CE9E2 /* NSObject+KVObserver.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		303962051C018AEA005CE9E2 /* LiteObserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3039621A1C018AEA005CE9E2 /* Build configuration list for PBXNativeTarget "LiteObserver" */;
+			buildPhases = (
+				303962011C018AEA005CE9E2 /* Sources */,
+				303962021C018AEA005CE9E2 /* Frameworks */,
+				303962031C018AEA005CE9E2 /* Headers */,
+				303962041C018AEA005CE9E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiteObserver;
+			productName = LiteObserver;
+			productReference = 303962061C018AEA005CE9E2 /* LiteObserver.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3039620F1C018AEA005CE9E2 /* LiteObserverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3039621D1C018AEA005CE9E2 /* Build configuration list for PBXNativeTarget "LiteObserverTests" */;
+			buildPhases = (
+				3039620C1C018AEA005CE9E2 /* Sources */,
+				3039620D1C018AEA005CE9E2 /* Frameworks */,
+				3039620E1C018AEA005CE9E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				303962131C018AEA005CE9E2 /* PBXTargetDependency */,
+			);
+			name = LiteObserverTests;
+			productName = LiteObserverTests;
+			productReference = 303962101C018AEA005CE9E2 /* LiteObserverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		303961FD1C018AEA005CE9E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LO;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "kelvin7980@163.com";
+				TargetAttributes = {
+					303962051C018AEA005CE9E2 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					3039620F1C018AEA005CE9E2 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 303962001C018AEA005CE9E2 /* Build configuration list for PBXProject "LiteObserver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 303961FC1C018AEA005CE9E2;
+			productRefGroup = 303962071C018AEA005CE9E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				303962051C018AEA005CE9E2 /* LiteObserver */,
+				3039620F1C018AEA005CE9E2 /* LiteObserverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		303962041C018AEA005CE9E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3039620E1C018AEA005CE9E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		303962011C018AEA005CE9E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303962351C01B1B5005CE9E2 /* LODisposable.m in Sources */,
+				303962491C01D114005CE9E2 /* LONotificationObserver.m in Sources */,
+				3039624D1C01D5AD005CE9E2 /* LOKVObserver.m in Sources */,
+				30B3F6931C0FE15100EF180D /* LOUtil.m in Sources */,
+				303962241C018BA5005CE9E2 /* NSObject+LODealloc.m in Sources */,
+				303962451C01D0D4005CE9E2 /* NSObject+NotificationObserver.m in Sources */,
+				303962511C01D8F2005CE9E2 /* NSObject+KVObserver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3039620C1C018AEA005CE9E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303962161C018AEA005CE9E2 /* LiteObserverTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		303962131C018AEA005CE9E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 303962051C018AEA005CE9E2 /* LiteObserver */;
+			targetProxy = 303962121C018AEA005CE9E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		303962181C018AEA005CE9E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		303962191C018AEA005CE9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3039621B1C018AEA005CE9E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LiteObserver/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = kelvin.LiteObserver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3039621C1C018AEA005CE9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LiteObserver/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = kelvin.LiteObserver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3039621E1C018AEA005CE9E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LiteObserverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = kelvin.LiteObserverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3039621F1C018AEA005CE9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LiteObserverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = kelvin.LiteObserverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		303962001C018AEA005CE9E2 /* Build configuration list for PBXProject "LiteObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303962181C018AEA005CE9E2 /* Debug */,
+				303962191C018AEA005CE9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3039621A1C018AEA005CE9E2 /* Build configuration list for PBXNativeTarget "LiteObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3039621B1C018AEA005CE9E2 /* Debug */,
+				3039621C1C018AEA005CE9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3039621D1C018AEA005CE9E2 /* Build configuration list for PBXNativeTarget "LiteObserverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3039621E1C018AEA005CE9E2 /* Debug */,
+				3039621F1C018AEA005CE9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 303961FD1C018AEA005CE9E2 /* Project object */;
+}
