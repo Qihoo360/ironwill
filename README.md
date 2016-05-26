@@ -1,5 +1,7 @@
 # Ironwill
 
+![](logo.png)
+
 Ironwill is a group of utility projects on iOS.
 
 ## Projects
