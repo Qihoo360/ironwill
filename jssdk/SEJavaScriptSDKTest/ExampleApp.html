@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+    <head>
+        <style type='text/css'>
+		html { font-family:Helvetica; color:#222; }
+		h1 { color:steelblue; font-size:24px; margin-top:24px; }
+		button { margin:0 3px 10px; font-size:12px; }
+		.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+        </style>
+    </head>
+    <body>
+        <h1>SE JavaScript SDK Demo</h1>
+        <div id='buttons'></div> <div id='log'></div>
+	<script>
+        
+    var uniqueId = 1
+    function log(message, data) {
+        var log = document.getElementById('log')
+        var el = document.createElement('div')
+        el.className = 'logLine'
+            
+        if (typeof data == 'object' ) {
+            el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data)
+        }
+        else {
+            el.innerHTML = uniqueId++ + '. ' + message
+        }
+            
+        if (log.children.length) { log.insertBefore(el, log.children[0]) }
+        else { log.appendChild(el) }
+    }
+    
+	window.onerror = function(err) {
+		log('window.onerror: ' + err)
+	}
+    
+    function sdkReady() {
+        log('SESDK.version:' + SESDK.version);
+        log('SESDK.isBroken:' + SESDK.isBroken);
+        log('SESDK.osVersion:' + SESDK.osVersion);
+        log('SESDK.deviceID:' + SESDK.deviceID);
+        log('SESDK.model:' + SESDK.model);
+        log('SESDK.appVersion:' + SESDK.appVersion);
+        
+        document.removeEventListener('SEJSSDKReady', sdkReady, false);
+        
+        SESDK.setTitle({title:'你好'});
+        
+        //右上角设置［分享］按钮
+        SESDK.setNavigationRightBarButton({
+                                          title:'分享'
+                                          }, function (res) {
+                                          log('removeNaviRightButton');
+                                            // 分享按钮点击处理函数
+                                            alert("分享按钮被点击");
+                                          })
+
+        //删除右上角的按钮
+        SESDK.setNavigationRightBarButton(null, null)
+
+        //获取网络状态
+        SESDK.getNetworkStatus(function (res) {
+            if (res.networkType == 0) {
+                log('无网络');
+            } else if (res.networkType == 1) {
+                log('Wi-Fi网络');
+            } else if (res.networkType > 1 && res.networkType < 10) {
+                log('蜂窝网络(' + res.networkType + ')');
+            } else {
+                log('未识别网络类型');
+            }
+        })
+
+        //获取设备的磁盘状态
+        SESDK.getDeviceDiskInfo(function (res) {
+			log('设备磁盘的总字节数:'+res.totalBytes)
+			log('设备当前可用磁盘的字节数'+res.availableBytes)
+		})
+
+        
+        //监听播放状态回调
+        SESDK.onPlayAudioEnd(function(result){
+                             log('onPlayAudioEnd:' + result.url);
+                             });
+
+
+        
+        var buttons = document.getElementById('buttons')
+        var button = null
+        
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'exit'
+        button.onclick = function(e) {
+            e.preventDefault()
+            SESDK.exit();
+        }
+        
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'canOpenURL'
+        button.onclick = function(e) {
+            e.preventDefault()
+            SESDK.canOpenURL({url:'http://www.so.com'}, function(result){
+                             log('canOpenURL result:' + result);
+                             });
+        }
+        
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'openURL'
+        button.onclick = function(e) {
+            e.preventDefault()
+            //SESDK.openURL({url:'http://www.so.com'}, function(result){
+            SESDK.openURL({url:'app-settings:'}, function(result){
+                             log('openURL result:' + result);
+                             });
+        }
+		
+
+   //      button = buttons.appendChild(document.createElement('button'))
+   //      button.innerHTML = 'play'
+   //      button.onclick = function(e) {
+   //          e.preventDefault()
+   //          //播放音乐
+	  //       SESDK.playAudioWithURL({
+			// 	'url': 'http://127.0.0.1/file/1549.mp3',
+			// 	// 'url': 'http://192.168.36.213/file/hongyan.mp3',
+			// 	'loops': 0
+			// });
+   //      }
+
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'play'
+        button.onclick = function(e) {
+            e.preventDefault()
+            //播放音乐
+	        SESDK.playAudioWithURL({
+				// 'url': 'http://127.0.0.1/file/1549.mp3',
+				'url': 'http://192.168.36.213/file/2010526284.mp3',
+				'loops': 0
+			});
+        }
+
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'stop1'
+        button.onclick = function(e) {
+            e.preventDefault()
+            //停止某音乐
+            SESDK.stopAudioWithURL({
+				// 'url': 'http://127.0.0.1/file/1549.mp3',
+				'url': 'http://192.168.36.213/file/2010526284.mp3'
+			});
+        }
+
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'stop'
+        button.onclick = function(e) {
+            e.preventDefault()
+            //停止所有
+            SESDK.stopAllAudio();
+        }
+        
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'writeImage'
+        button.onclick = function(e) {
+            e.preventDefault()
+            var imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAABGdBTUEAALGPC/xhBQAAAhZQTFRFQJSC////ULqjTbOcSauVRaCMVcatQJaDVMSrTrafRqSPU8KqS66YQZiFQZeEU8GoTbOdUb2lQpqGQ5uIU8GpQ5yIUsCoQpmGTLGbQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJSCQJaDRaCMRaCMTbOcULqjULqjUsCoUsCoVMOqVMSrVcatVcatVMSsVMSrU8KqUsCoVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatVcatQJSCQJWCRJ+LSauVTbOdULukU8GoVMOqVcatQJaDR6WRTrafQZiFSq2XU8KqQZeES66YVMSrRqOOUsCoTLGbQpmGUb2lQ5yIQ5uIU8GpQpqGRqSPkuPRl+bVac+4gdvHq/HicNK8pu7fXMmxnOnYh97KfNjDoezbdtXATbOcY8y1////Y9wcXwAAAIZ0Uk5TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM2c6HG4vEHV63wE4HsCoTzTeDhCJOUGc4m3yTpHJVPDeUOhYIG66w8O5rC4fHy+fLt4eDCwppzczw7B/OsTwbs64MTFIWHDuVQUZ4Kz9Ac4uMk6eom3ygZzgiTlE3hC+2t8QM2osb0+u7ddDfrZxTtAAAC40lEQVRIx53W+VsSQRgH8KFjMC3LyhMPVDywLG/NTC21u7QSoTDT0tKsTC3NI+0cRWEQ5BDEMwXp/hPbXSBBdpbd/f7G+87n4Zl399kZAFiSnCJLTUvPQCgjPS1VlpIc3JP4E67kmVnZKCTZWZnyiFCRk4tYkpuj4IR5+UpEiDI/jwwLTiGOnC4gwMIzgSUzs7q5eb0BY4N+fk43OxOony1kg0XFvq5xwUSR4BhMC0Zfr7goHJaUMi3zogWzxLJoZtqlJXthWTldt9rsmBC7zUqvKC8LhRXMWJYcmCOOJWZEFcFQTu/P6MQR4qS3WiwPgpVUYdmFI8a1TC2s3IVV1M8VB+YRxwq1tCoAz1UjtLqGeWVtFaHq835Yg9C6A/OMYx2hGh9UKJHRhXnHZURKBQMvIOTEAuJEKIeGtXVoAwvKBqqrldAjtepJSza/bbFU9VZqsADUIxvJbbvdHra6DdVLgFxpJr2fW24CtJuVcnCR+IdbOySIF9ElIDNa2J2HdgRoMcpAA/tIvdT+vv8gQbzRABpNbI2fv9zuTe82EZoaQZOdfZw7v8lTpcbTBC6zPoedbS/mgvgK0LEO1Mv5HKnowB+Od4sDXgXXxMHr4IY4eBPcEgdvg2ZxsBm0iIN3wF1x8B5oVYmBqlawr00MbJOA/WoxUC0BBzT3hcMHGgk4CLXCoZb6PEqj2lVCoeoh/V09BDuEwkfMERANO7sI8K/H42Upd3UyUBoDHwv7kj/xH3OHIewW4roDB+uRKNjzlL971vP/RKb+srePr3veu3t5iD0KYf8Lfu5lf/B1JRpC+GqAjxt4HXpBOkbJwaHIbmgQhsLYOEoOv4nk3g7DPRAcp7YJ4cgoFxsdodfsvcudOElXezqI762q4x29Iibs9hifQNdhu3aMjY1p25l2Qnz4fTUxjmlBjXp8IlRNjKs1vl5cItsNWZoE/Zl83zI13fcBf/z0eXrqy9fJQD1JuntD/gdBimKJ8Xi19wAAAABJRU5ErkJggg=='
+            SESDK.writeImageToAlbum({data:imageData,album:'360手机卫士'}, function(result){
+                                    if (result.error == 0) {
+                                        log('writeImage success');
+                                    }
+                                    else {
+                                        log('writeImage error:' + result.error + ' msg:' + result.msg);
+                                    }
+                             });
+                    
+        }
+        
+        // getBatteryState
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'getBatteryState'
+        button.onclick = function(e) {
+            e.preventDefault()
+            SESDK.getBatteryState(function(result){
+                             log('getBatteryState result:' + result);
+                             });
+        }
+        
+        // getAssetsAuthStatus
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'getAssetsAuthStatus'
+        button.onclick = function(e) {
+            e.preventDefault()
+            SESDK.getAssetsAuthStatus(function(result){
+                                      log('getAssetsAuthStatus result:' + result);
+                                      });
+        }
+        
+        // getCalendarAuthStatus
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'getCalendarAuthStatus'
+        button.onclick = function(e) {
+            e.preventDefault()
+            SESDK.getCalendarAuthStatus(function(result){
+                                      log('getCalendarAuthStatus result:' + result);
+                                      });
+        }
+        
+        // getBeaconList
+        button = buttons.appendChild(document.createElement('button'))
+        button.innerHTML = 'getBeaconList'
+        button.onclick = function(e) {
+            e.preventDefault()
+            SESDK.getBeaconList(function(result){
+                                        log('getBeaconList result:' + JSON.stringify(result));
+                                        });
+        }
+    }
+    
+    if (typeof window.SESDK != 'undefined') {
+        // SESDK已经初始化，可直接使用，无需等事件
+        sdkReady();
+    }
+    else {
+        // SESDK未初始化完毕，必须等收到SEJSSDKReady事件后，才可以使用SESDK及YYSDK对象
+        document.addEventListener('SEJSSDKReady', sdkReady, false);
+    }
+	
+	</script>
+</body></html>
