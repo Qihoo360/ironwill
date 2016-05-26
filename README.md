@@ -9,4 +9,4 @@ LiteObserver
 ## Getting Started
 [LiteObserver](https://github.com/Qihoo360/ironwill/blob/master/liteobserver/readme.cn.md)
 
-[JSSDK](https://github.com/Qihoo360/ironwill/blob/master/jssdk/readme.md)
+[JSSDK](https://github.com/Qihoo360/ironwill/blob/master/jssdk/README.md)
